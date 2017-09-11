@@ -1,5 +1,5 @@
 {
-  "name": "dogbot",
+  "name": "dgc",
   "version": "0.0.1",
   "description": ":shell: wechat chat bot for nodeJS, built with kotlin",
   "main": "main.js",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/adogio/dogBot/issues"
   },
-  "homepage": "https://github.com/adogio/dogBot#readme"
+  "homepage": "https://github.com/adogio/dogBot#readme",
+  "dependencies": {
+    "kotlin": "^1.1.4"
+  }
 }
