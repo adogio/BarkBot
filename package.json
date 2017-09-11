@@ -1,0 +1,24 @@
+{
+  "name": "dogbot",
+  "version": "0.0.1",
+  "description": ":shell: wechat chat bot for nodeJS, built with kotlin",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adogio/dogBot.git"
+  },
+  "keywords": [
+    "wechat",
+    "bot",
+    "kotlin"
+  ],
+  "author": "WMXPY",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/adogio/dogBot/issues"
+  },
+  "homepage": "https://github.com/adogio/dogBot#readme"
+}
