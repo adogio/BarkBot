@@ -1,5 +1,5 @@
 {
-  "name": "dgc",
+  "name": "bkbot",
   "version": "0.0.1",
   "description": ":shell: wechat chat bot for nodeJS, built with kotlin",
   "main": "main.js",
