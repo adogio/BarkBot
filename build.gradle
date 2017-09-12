@@ -19,10 +19,11 @@ repositories {
 
 dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
-  // compile files('src/main/bkbot/bkbot.kt')
 }
 
 compileKotlin2Js.kotlinOptions {
   moduleKind = "commonjs"
   outputFile = "main/lunch.js"
 }
+
+// compile fileTree(dir:'src/main/test', include: '*.kt')
