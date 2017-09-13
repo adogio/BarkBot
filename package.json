@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adogio/dogBot.git"
+    "url": "git+https://github.com/adogio/BarkBot.git"
   },
   "keywords": [
     "wechat",
@@ -18,9 +18,9 @@
   "author": "WMXPY",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/adogio/dogBot/issues"
+    "url": "https://github.com/adogio/BarkBot/issues"
   },
-  "homepage": "https://github.com/adogio/dogBot#readme",
+  "homepage": "https://github.com/adogio/BarkBot#readme",
   "dependencies": {
     "kotlin": "^1.1.4"
   }
