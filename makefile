@@ -9,8 +9,10 @@ bkbot :
 
 # clean with gradle
 clean :
-	rm -rf .gradle build
-	rm -rf main/lunch main/*.js
+	rm -rf .gradle
+	rm -rf build
+	rm -rf main/lunch
+	rm -rf main/*.js
 
 # clean with kotlinc
 # clean :

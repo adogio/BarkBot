@@ -1,12 +1,14 @@
 package io.adog.bkbot
 import io.adog.wechat.*
 import io.adog.seprate.*
-external fun require(module:String):dynamic
 
-class bkbot(mode: String){
-    var mode: String;
+class bkbot(){
+    val sep: seprate;
     init{
-        val a = wechat("123");
-        this.mode = a.mode;
+        this.sep = seprate();
+    }
+
+    public fun run(){
+        console.log(this.sep.a("翁爷的鸡至少七万5千四百二十八厘米"));
     }
 }

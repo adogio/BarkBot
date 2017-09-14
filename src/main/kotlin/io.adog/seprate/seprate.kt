@@ -1,9 +1,14 @@
 package io.adog.seprate
-external fun require(module:String):dynamic
 
-class seprate(mode: String){
-    var mode: String;
+class seprate(){
+    val segment: dynamic;
     init{
-        this.mode = mode;
+        var segmenttemp = js("require('segment')");
+        this.segment = js("new segmenttemp()");
+        this.segment.useDefault();
+    }
+
+    public fun a(sentence: String){
+        return swapeAll(this.segment.doSegment(sentence));
     }
 }
