@@ -2,3 +2,7 @@
 .gradle
 main
 node_modules
+.classpath
+.project
+bin
+.settings
