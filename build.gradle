@@ -1,16 +1,13 @@
 group 'io.adog.bkbot'
 version '0.0.1'
 
-org.gradle.daemon=false
-org.gradle.parallel=false
-kotlin.incremental=false
-
 buildscript {
   ext.kotlin_version = '1.1.4'
   
-    repositories {
-      mavenCentral()
-    }
+  repositories {
+    mavenCentral()
+  }
+  
   dependencies {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
