@@ -3,7 +3,8 @@ import io.adog.seprate.*
 
 class bkbot(){
     val sep: seprate;
-    init{
+    
+    init {
         this.sep = seprate();
     }
 

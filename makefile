@@ -41,4 +41,4 @@ run :
 # ------------------------------------
 # run with packaged glue file
 r :
-	node ./src/bin/bkbot.js
+	node ./src/bin/bkbot.js $(A)
