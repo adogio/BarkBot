@@ -8,12 +8,10 @@ class bkbot(){
     init {
         this.sep = seprate();
     }
-
-    public fun run(){
-        this.sep.a("翁爷的鸡巴至少七万5千四百二十八厘米");
-        this.sep.a("我在车里喝水");
-        this.sep.a("Nana今天吃了很多屎");
-
+    
+    public fun sentence(sentence: String) {
+        this.sep.a(sentence);
         this.sep.log();
+        this.sep.clean();
     }
 }

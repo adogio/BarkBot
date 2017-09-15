@@ -32,7 +32,7 @@ clean :
 # ------------------------------------
 # run with gradle
 run :
-	node ./main/lunch.js
+	node ./src/bin/bash.js
 
 # run with kotlinc
 # run :
@@ -41,4 +41,4 @@ run :
 # ------------------------------------
 # run with packaged glue file
 r :
-	node ./src/bin/bkbot.js $(A)
+	node ./src/bin/bash.js $(A)
