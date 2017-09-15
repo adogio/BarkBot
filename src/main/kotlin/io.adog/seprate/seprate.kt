@@ -3,7 +3,7 @@ import io.adog.lib.jarray
 
 class seprate(){
     val segment: dynamic;
-    val sentenceList: jarray;
+    var sentenceList: jarray;
 
     init {
         var segmenttemp = js("require('segment')");
@@ -13,10 +13,14 @@ class seprate(){
     }
 
     public fun a(sentence: String){
-        var b = sentence(sentence);
+        var b = sentence(sentence, this.segment);
         this.sentenceList.push(b);
-        console.log(this.sentenceList.list[0].w);
-        return swapeAll(this.segment.doSegment(sentence));
+    }
+
+    public fun log(){
+        for(i in this.sentenceList){
+            console.log(i.p());
+        }
     }
 
 }

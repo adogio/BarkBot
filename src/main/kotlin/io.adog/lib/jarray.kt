@@ -10,4 +10,15 @@ class jarray() {
     public fun push(a: dynamic) {
         js("this.list.push(a)");
     }
+
+    open fun iterator(){
+        return {
+            fun next(){
+                return 1;
+            }
+            fun hasNext(){
+                return true;
+            }
+        };
+    }
 }
