@@ -37,3 +37,8 @@ run :
 # run with kotlinc
 # run :
 # 	node ./build/lunch.js
+
+# ------------------------------------
+# run with packaged glue file
+r :
+	node ./src/bin/bkbot.js
