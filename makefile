@@ -26,7 +26,10 @@ clean :
 # clean :
 # 	rm -rf build/*.js
 # 	rm -rf build/lunch
+# typeScripts
+#	rm -rf src/bin/*.js src/main/module/*.js
 
+# ------------------------------------
 # run with gradle
 run :
 	node ./main/lunch.js
