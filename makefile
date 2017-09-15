@@ -15,13 +15,12 @@ tsBuild :
 
 # clean with gradle
 clean :
-# mains
-	rm -rf main/lunch
-	rm -rf main/*.js
 # paths
 	rm -rf .classpath .project
 # folders
-	rm -rf bin .settings .gradle build
+	rm -rf bin .settings .gradle build main
+# typeScripts
+	rm -rf src/bin/*.js src/main/module/*.js
 
 # clean with kotlinc
 # clean :
