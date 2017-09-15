@@ -2,24 +2,14 @@ package io.adog.lib
 
 class jarray() {
     val list: dynamic;
-    var undo: dynamic;
     var index = 0;
 
     init {
         this.list = js("[]");
-        this.undo = null;
     }
 
     public fun push(a: dynamic) {
         js("this.list.push(a)");
-        this.undo = a;
-        return this.list;
-    }
-
-    public fun pop(){
-        var pop = js("this.list.pop()");
-        this.undo = pop;
-        return pop;
     }
 
     operator
@@ -29,11 +19,7 @@ class jarray() {
 
     private inner class Itr : Iterator<dynamic> {
         override fun hasNext(): Boolean {
-            var hasNext = js("this.\$outer.index < this.\$outer.list.length");
-            if(!hasNext){
-                index = 0;
-            }
-            return hasNext;
+            return js("this.\$outer.index < this.\$outer.list.length");
         }
 
         override fun next() : dynamic {
