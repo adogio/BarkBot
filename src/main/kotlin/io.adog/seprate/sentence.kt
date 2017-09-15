@@ -1,7 +1,10 @@
 package io.adog.seprate
 
 class sentence(sentence: String){
+    val sentence: String;
     init {
-        console.log(sentence)
+        this.sentence = sentence;
     }
+
+    
 }

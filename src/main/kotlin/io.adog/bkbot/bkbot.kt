@@ -1,5 +1,6 @@
 package io.adog.bkbot
 import io.adog.seprate.*
+import io.adog.lib.*
 
 class bkbot(){
     val sep: seprate;
