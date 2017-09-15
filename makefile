@@ -4,8 +4,14 @@
 # 	kotlinc-js -output build/lunch.js src/main.kt
 
 # build with gradle
-bkbot :
+bkbot : gradleBuild tsBuild
+	echo done
+	
+gradleBuild :
 	gradle build
+
+tsBuild :
+	tsc
 
 # clean with gradle
 clean :

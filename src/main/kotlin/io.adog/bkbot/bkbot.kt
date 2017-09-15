@@ -1,5 +1,4 @@
 package io.adog.bkbot
-import io.adog.wechat.*
 import io.adog.seprate.*
 
 class bkbot(){
