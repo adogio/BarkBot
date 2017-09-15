@@ -19,7 +19,7 @@ class seprate(){
 
     public fun log(){
         for(i in this.sentenceList){
-            console.log(i.p());
+            console.log(getObj(i));
         }
     }
 

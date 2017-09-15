@@ -1,14 +1,17 @@
 {
   "name": "bkbot",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": ":shell: wechat chat bot for nodeJS, built with kotlin",
-  "main": "main.js",
+  "main": "src/bin/bkbot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adogio/BarkBot.git"
+  },
+  "bin": {
+    "bkbot": "src/bin/bash.js"
   },
   "keywords": [
     "wechat",

@@ -1,8 +1,12 @@
 package io.adog.seprate
 import io.adog.seprate.sentence
 
-fun getVerb(sentence: sentence) {
+fun getObj(sentence: sentence){
+    return sentence.p();
+}
 
+fun getVerb(sentence: sentence) {
+    
 }
 
 fun getNone(sentence: sentence) {
