@@ -26,6 +26,10 @@
   "homepage": "https://github.com/adogio/BarkBot#readme",
   "dependencies": {
     "kotlin": "^1.1.4",
-    "segment": "^0.1.3"
+    "segment": "^0.1.3",
+    "shell-escape": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.28"
   }
 }
