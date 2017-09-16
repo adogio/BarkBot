@@ -19,7 +19,7 @@ tsBuild :
 # clean with gradle
 clean :
 # paths
-	rm -rf .classpath .project
+	rm -rf .classpath .project npm-debug.log
 # folders
 	rm -rf bin .settings .gradle build main
 # typeScripts
