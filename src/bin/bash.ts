@@ -10,5 +10,16 @@ let parseList = process.argv;
 parseList.splice(0, 2);
 
 // bkbot.io.adog.bkbot.main_kand9s$(parseList);
+interval();
 
-bash.setClip("daiosdjioas");
+let clipboard = "";
+function interval() {
+    bash.getClip(function (out: string) {
+        let a = out;
+        if (a != clipboard) {
+            clipboard = a;
+            console.log(clipboard);
+        }
+        setTimeout(interval, 500);
+    })
+}
