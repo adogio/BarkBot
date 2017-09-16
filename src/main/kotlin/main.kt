@@ -5,5 +5,7 @@ external fun console(log:String):dynamic;
 
 fun main(args: Array<String>) {
     val a = bkbot();
-    a.run();
+    for(i in args){
+        a.sentence(i);
+    }
 }

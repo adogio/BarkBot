@@ -12,8 +12,8 @@ class seprate(){
         this.sentenceList = jarray();
     }
 
-    public fun a(sentence: String){
-        var b = sentence(sentence, this.segment);
+    public fun a(sen: String){
+        var b = sentence(sen, this.segment);
         this.sentenceList.push(b);
     }
 
@@ -23,4 +23,8 @@ class seprate(){
         }
     }
 
+    public fun clean(): Int{
+        this.sentenceList.clean();
+        return 1;
+    }
 }

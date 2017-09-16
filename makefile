@@ -1,3 +1,4 @@
+# Makefile For BarkBot version 0.1.1
 
 # build with kotlinc
 # bkbot :
@@ -10,6 +11,8 @@ bkbot : gradleBuild tsBuild
 gradleBuild :
 	gradle build
 
+o : tsBuild test
+
 tsBuild :
 	tsc
 
@@ -20,7 +23,7 @@ clean :
 # folders
 	rm -rf bin .settings .gradle build main
 # typeScripts
-	rm -rf src/bin/*.js src/main/module/*.js
+	rm -rf src/bin/*.js src/main/modules/*.js
 
 # clean with kotlinc
 # clean :
@@ -32,7 +35,7 @@ clean :
 # ------------------------------------
 # run with gradle
 run :
-	node ./main/lunch.js
+	node ./src/bin/bash.js
 
 # run with kotlinc
 # run :
@@ -41,4 +44,12 @@ run :
 # ------------------------------------
 # run with packaged glue file
 r :
-	node ./src/bin/bkbot.js $(A)
+	node ./src/bin/bash.js $(A)
+
+test :
+	node ./src/bin/bash.js 测试测试测试
+
+opt :
+	echo $(A) | tee tmp.file.txt
+	xclip -selection clipboard < tmp.file.txt
+	rm tmp.file.txt

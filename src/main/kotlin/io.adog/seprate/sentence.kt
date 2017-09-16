@@ -1,4 +1,5 @@
 package io.adog.seprate
+import io.adog.seprate.*
 
 class sentence(sentence: String, segment: dynamic) {
     val sentence: String;
@@ -8,7 +9,7 @@ class sentence(sentence: String, segment: dynamic) {
     init {
         this.sentence = sentence;
         this.segment = segment;
-        this.parsed = this.segment.doSegment(this.sentence);
+        this.parsed = swapeAll(this.segment.doSegment(this.sentence));
     }
 
     public fun p(){

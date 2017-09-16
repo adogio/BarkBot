@@ -1,7 +1,7 @@
 package io.adog.lib
 
 class jarray() {
-    val list: dynamic;
+    var list: dynamic;
     var undo: dynamic;
     var index = 0;
 
@@ -20,6 +20,11 @@ class jarray() {
         var pop = js("this.list.pop()");
         this.undo = pop;
         return pop;
+    }
+
+    public fun clean(){
+        this.list = js("[]");
+        this.undo = null;
     }
 
     operator
