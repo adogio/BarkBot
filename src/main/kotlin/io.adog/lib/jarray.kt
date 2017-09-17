@@ -10,6 +10,10 @@ class jarray() {
         this.undo = null;
     }
 
+    public fun length(){
+        return js("this.list.length");
+    }
+    
     public fun push(a: dynamic) {
         js("this.list.push(a)");
         this.undo = a;

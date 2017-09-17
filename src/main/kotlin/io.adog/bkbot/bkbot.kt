@@ -18,7 +18,7 @@ class bkbot(){
 
     public fun bot(sentence: String){
         this.sep.a(sentence);
-        console.log(response(this.sep.sen()));
+        console.log(learn(this.sep.sen(),"123"));
         this.sep.clean();
     }
 }

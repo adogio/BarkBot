@@ -46,7 +46,7 @@ run :
 r :
 	node ./src/bin/bash.js $(A)
 
-test :
+t :
 	node ./src/bin/bash.js 今天的天气怎么样
 
 opt :

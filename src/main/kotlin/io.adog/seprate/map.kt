@@ -1,7 +1,7 @@
 package io.adog.seprate
 import io.adog.seprate.sentence
 
-fun getObj(sentence: sentence){
+fun getObj(sentence: sentence): Array<dynamic>{
     return sentence.p();
 }
 

@@ -37,7 +37,7 @@ public fun dict(mode: dynamic){
     println(mode);
 }
 
-public fun swapeAll(seprated: dynamic): dynamic{
+public fun swapeAll(seprated: dynamic): Array<dynamic>{
     var re = js("[]");
     for(i in seprated){
         var b = swape(i.p);
