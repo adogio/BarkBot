@@ -47,7 +47,7 @@ r :
 	node ./src/bin/bash.js $(A)
 
 test :
-	node ./src/bin/bash.js 测试测试测试
+	node ./src/bin/bash.js 今天的天气怎么样
 
 opt :
 	echo $(A) | tee tmp.file.txt

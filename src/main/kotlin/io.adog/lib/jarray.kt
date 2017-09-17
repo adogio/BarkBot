@@ -26,6 +26,10 @@ class jarray() {
         this.list = js("[]");
         this.undo = null;
     }
+    
+    public fun get(target: Int){
+        return js("this.list[target]");
+    }
 
     operator
     fun iterator(): Iterator<dynamic> {

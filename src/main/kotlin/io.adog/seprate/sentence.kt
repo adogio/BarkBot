@@ -15,5 +15,9 @@ class sentence(sentence: String, segment: dynamic) {
     public fun p(){
         return this.parsed;
     }
+
+    public fun s(): String{
+        return this.sentence;
+    }
     
 }

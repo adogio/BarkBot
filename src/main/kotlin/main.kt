@@ -6,6 +6,6 @@ external fun console(log:String):dynamic;
 fun main(args: Array<String>) {
     val a = bkbot();
     for(i in args){
-        a.sentence(i);
+        a.bot(i);
     }
 }
