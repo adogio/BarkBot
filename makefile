@@ -7,14 +7,10 @@
 # build with gradle
 bkbot : gradleBuild tsBuild
 	echo done
-	
-gradleBuild :
-	gradle build
 
 o : tsBuild test
 
-tsBuild :
-	tsc
+run : tsBuild r
 
 # clean with gradle
 clean :
@@ -32,9 +28,17 @@ clean :
 # typeScripts
 #	rm -rf src/bin/*.js src/main/module/*.js
 
+reset :
+	echo {} > ./test/test.json
+	echo [] > ./test/bug.json
+
+
+tsBuild :
+	tsc
+
 # ------------------------------------
 # run with gradle
-run : tsBuild
+r :
 	node ./src/bin/bash.js
 
 # run with kotlinc
@@ -46,15 +50,11 @@ run : tsBuild
 r :
 	node ./src/bin/bash.js $(A)
 
-t :
-	node ./src/bin/bash.js
-
 opt :
 	echo $(A) | tee tmp.file.txt
 	xclip -selection clipboard < tmp.file.txt
 	rm tmp.file.txt
 
-
-reset :
-	echo {} > ./test/test.json
-	echo [] > ./test/bug.json
+	
+gradleBuild :
+	gradle build
