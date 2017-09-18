@@ -53,3 +53,8 @@ opt :
 	echo $(A) | tee tmp.file.txt
 	xclip -selection clipboard < tmp.file.txt
 	rm tmp.file.txt
+
+
+reset :
+	echo {} > ./test/test.json
+	echo [] > ./test/bug.json
