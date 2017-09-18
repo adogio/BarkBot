@@ -42,6 +42,9 @@ function parseSentence(parsing: string) {
                 help();
                 break;
             case "学习":
+                if (!Boolean(content)) {
+                    logger("学习的正确格式是$学习-[反应语素]>[回答方式]");
+                }
                 let sentence = content.split(">")[0];
                 let response = content.split(">")[1];
                 // logger(sentence, response);
