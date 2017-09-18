@@ -41,7 +41,6 @@ public fun learn(sentence: sentence, response: String): String {
     leveln.add(n.get(0), levelw.info());
     file.add(v.get(0),leveln.info());
 
-    console.log(sentence.p());
     fs.writeFileSync("./test/test.json", file.info());
     return str;
 }

@@ -11,12 +11,12 @@ class sentence(sentence: String, segment: dynamic) {
         this.sentence = sentence;
         this.segment = segment;
         this.segment.loadSynonymDict("synonym.txt");
-        this.segment.loadStopwordDict("stopword.txt");
+        // this.segment.loadStopwordDict("stopword.txt");
         var a: dynamic = null;
         js("a = {}")
         js("a.convertSynonym = true");
-        js("a.stripStopword = true");
-        js("a.stripPunctuation = true");
+        // js("a.stripStopword = true");
+        // js("a.stripPunctuation = true");
         this.parsed = swapeAll(this.segment.doSegment(this.sentence, a));
     }
 
