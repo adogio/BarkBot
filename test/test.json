@@ -1,0 +1,34 @@
+{
+    "吃": {
+        "火锅": {
+            "翁爷": {
+                "default": "学习使我快乐"
+            }
+        }
+    },
+    "default": {
+        "火锅": {
+            "翁爷": {
+                "default": "学习使我快乐"
+            }
+        },
+        "default": {
+            "clipboard": {
+                "default": "学习使我快乐"
+            },
+            "packages": {
+                "default": "学习使我快乐"
+            },
+            "export": {
+                "default": "学习使我快乐"
+            }
+        }
+    },
+    "学习": {
+        "default": {
+            "使": {
+                "default": "学习使我快乐"
+            }
+        }
+    }
+}

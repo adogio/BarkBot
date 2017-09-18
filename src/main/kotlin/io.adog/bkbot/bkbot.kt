@@ -16,9 +16,17 @@ class bkbot(){
         this.sep.clean();
     }
 
-    public fun bot(sentence: String){
+    public fun learn(sentence: String, response: String): String{
         this.sep.a(sentence);
-        console.log(learn(this.sep.sen(),"123"));
+        var a: String = learn(this.sep.sen(), response);
         this.sep.clean();
+        return a;
+    }
+
+    public fun response(sentence: String): String{
+        this.sep.a(sentence);
+        var a: String = learn(this.sep.sen(),"123");
+        this.sep.clean();
+        return a;
     }
 }

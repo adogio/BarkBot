@@ -47,7 +47,7 @@ r :
 	node ./src/bin/bash.js $(A)
 
 t :
-	node ./src/bin/bash.js 怎么申请opt
+	node ./src/bin/bash.js $ 学习使我快乐 翁爷昨天在北京吃火锅
 
 opt :
 	echo $(A) | tee tmp.file.txt
