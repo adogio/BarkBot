@@ -8,8 +8,10 @@ const bash = new bashHelper();
 
 let parseList = process.argv;
 parseList.splice(0, 2);
-
-bkbot.io.adog.bkbot.main_kand9s$(parseList);
+let a = bkbot.io.adog.bkbot.bkbot
+let s = a;
+console.log(new s());
+// bkbot.io.adog.bkbot.main_kand9s$(parseList);
 // bash.setClip("test");
 // interval();
 

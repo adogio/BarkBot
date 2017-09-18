@@ -7,7 +7,11 @@ var fs = js("require(\"fs\")");
 public fun learn(sentence: sentence, response: String){
     // var contentText = fs.readFileSync("./test/test.txt");
     // var a = jobj(contentText);
+    console.log(sentence.p());
+    console.log(sentence.v().list);
     console.log(sentence.n().list);
+    console.log(sentence.w().list);
+    console.log(sentence.h().list);
 }
 
 public fun response(sentence: sentence): String{

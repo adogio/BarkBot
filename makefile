@@ -47,7 +47,7 @@ r :
 	node ./src/bin/bash.js $(A)
 
 t :
-	node ./src/bin/bash.js 今天的天气怎么样
+	node ./src/bin/bash.js 怎么申请opt
 
 opt :
 	echo $(A) | tee tmp.file.txt
