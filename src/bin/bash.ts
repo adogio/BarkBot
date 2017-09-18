@@ -41,19 +41,22 @@ function parseSentence(parsing: string) {
             case "帮助":
                 help();
                 break;
+            case "分析":
+                logger(s.language_61zpoe$(content));
+                break;
             case "学习":
                 if (!Boolean(content)) {
                     logger("学习的正确格式是$学习-[反应语素]>[回答方式]");
                 }
                 let sentence = content.split(">")[0];
                 let response = content.split(">")[1];
-                // logger(sentence, response);
                 logger(s.learn_puj7f4$(sentence, response));
                 break;
             case "数据":
                 logger("数据功能还没有开发出来");
                 break;
             default:
+                logger("$" + mode + " 不是一个有效的命令");
         }
     } else {
         logger(s.response_61zpoe$(parsing));
@@ -64,18 +67,18 @@ function hello() {
 }
 
 function help() {
-    logger("可用的命令: $学习-[反应语素]>[回答方式], $反馈-[反馈的内容], $帮助, $数据-[记录项目]");
+    logger("可用的命令: $学习-[问题]>[回答方式], $反馈-[反馈的内容], $帮助, $数据-[记录项目], $分析-[句子]");
 }
 
 function logger(str: string) {
     counter++;
     if (str == undefined) {
         bash.setClip("这个命令没有可以反馈的语法");
-        clipboard = "这个命令没有可以反馈的语法";
+        if (bash.getOS() != "linux") clipboard = "这个命令没有可以反馈的语法";
         console.log("这个命令没有可以反馈的语法");
     } else {
         bash.setClip(str);
-        clipboard = str;
+        if (bash.getOS() != "linux") clipboard = str;
         console.log(str);
     }
 }

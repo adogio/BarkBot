@@ -22,8 +22,8 @@ class bashHelper {
             }
                 break;
             case 'linux': fun = (str, fn) => {
-                let cmd = 'make opt A="' + str + '"';
-                exec(cmd, fn || function () { });
+                // let cmd = 'make opt A="' + str + '"';
+                // exec(cmd, fn || function () { });
             }
                 break;
             case 'darwin': fun = (str, fn) => {
@@ -45,6 +45,10 @@ class bashHelper {
             var cmd = escape(['printf', str]) + ' | ' + program;
             exec(cmd, fn || function () { });
         }
+    }
+
+    getOS() {
+        return this.os;
     }
 
     getClip(fun: Function) {

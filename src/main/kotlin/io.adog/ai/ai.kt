@@ -15,7 +15,7 @@ public fun learn(sentence: sentence, response: String): String {
     var h = sentence.h();
 
     if(v.length()>1||n.length()>1||w.length()>1||h.length()>1){
-        str = "句子的元素过于复杂, 请酌情减少元素内容";
+        str = "句子的元素过于复杂, 请酌情减少元素内容, 你可以用 \$分析-[句子] 命令查看其中的语素来优化";
         return str;
     }
     file.create(v.get(0));
@@ -76,4 +76,8 @@ public fun bugR(content: String): String {
     str = "反馈的bug已经被记录了. 感谢.";
 
     return str;
+}
+
+public fun languageR(sentence: sentence): Array<dynamic> {
+    return sentence.p();
 }

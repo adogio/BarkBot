@@ -15,7 +15,47 @@ public fun swapeAll(seprated: dynamic): Array<dynamic>{
     return re;
 }
 
-public fun swape(postag: Int): String{
+public fun reverse(posstr: String): String {
+    var re: String;
+    when {
+        posstr == "adj" -> re = "形容词"
+        posstr == "dif" -> re = "区别词"
+        posstr == "con" -> re = "连词"
+        posstr == "adv" -> re = "副词"
+        posstr == "omg" -> re = "叹词"
+        posstr == "dir" -> re = "方位词"
+        posstr == "lon" -> re = "成语"
+        posstr == "feq" -> re = "习语"
+        posstr == "num" -> re = "数词"
+        posstr == "nuw" -> re = "数量词"
+        posstr == "n"   -> re = "名词"
+        posstr == "snd" -> re = "拟声词"
+        posstr == "use" -> re = "介词"
+        posstr == "nun" -> re = "量词"
+        posstr == "rep" -> re = "代词"
+        posstr == "loc" -> re = "处所词"
+        posstr == "tim" -> re = "时间词"
+        posstr == "hlp" -> re = "助词"
+        posstr == "v"   -> re = "动词"
+        posstr == "com" -> re = "标点符号"
+        posstr == "prt" -> re = "非语素字"
+        posstr == "nah" -> re = "语气词"
+        posstr == "buf" -> re = "状态词"
+        posstr == "nam" -> re = "人名"
+        posstr == "plc" -> re = "地名"
+        posstr == "org" -> re = "机构团体"
+        posstr == "eng" -> re = "外文字符"
+        posstr == "otr" -> re = "其他专名"
+        posstr == "fnt" -> re = "前接成分"
+        posstr == "bhd" -> re = "后接成分"
+        posstr == "nul" -> re = "未知词性"
+        posstr == "url" -> re = "网址"
+        else -> re = "无意义词"
+    }
+    return re;
+}
+
+public fun swape(postag: Int): String {
     var re: String;
     when {
         postag == 0x40000000 -> re = "adj" // 形容词 形语素
