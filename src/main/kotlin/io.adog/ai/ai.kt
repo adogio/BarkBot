@@ -61,3 +61,18 @@ public fun response(sentence: sentence): String {
 
     return str;
 }
+
+public fun bugR(content: String): String {
+    var contentText = fs.readFileSync("./test/bug.json");
+
+    var str = "";
+
+    var parsed = js("JSON.parse(contentText)");
+    js("parsed.push(content)");
+
+    fs.writeFileSync("./test/bug.json", js("JSON.stringify(parsed)"));
+
+    str = "反馈的bug已经被记录了. 感谢.";
+
+    return str;
+}

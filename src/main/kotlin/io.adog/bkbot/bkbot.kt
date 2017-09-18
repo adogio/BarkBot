@@ -16,17 +16,21 @@ class bkbot(){
         this.sep.clean();
     }
 
-    public fun learn(sentence: String, response: String): String{
+    public fun learn(sentence: String, response: String): String {
         this.sep.a(sentence);
         var a: String = learn(this.sep.sen(), response);
         this.sep.clean();
         return a;
     }
 
-    public fun response(sentence: String): String{
+    public fun response(sentence: String): String {
         this.sep.a(sentence);
         var a: String = response(this.sep.sen());
         this.sep.clean();
         return a;
+    }
+
+    public fun bug(content: String): String {
+        return bugR(content);
     }
 }

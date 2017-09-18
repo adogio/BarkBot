@@ -47,7 +47,7 @@ r :
 	node ./src/bin/bash.js $(A)
 
 t :
-	node ./src/bin/bash.js bk教学-opt是什么>是鸡
+	node ./src/bin/bash.js
 
 opt :
 	echo $(A) | tee tmp.file.txt
