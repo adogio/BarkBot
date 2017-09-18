@@ -12,10 +12,11 @@ public fun learn(sentence: sentence, response: String): String {
     var v = sentence.v();
     var n = sentence.n();
     var w = sentence.w();
+    var t = sentence.t();
     var h = sentence.h();
 
-    if(v.length()>1||n.length()>1||w.length()>1||h.length()>1){
-        str = "句子的元素过于复杂, 请酌情减少元素内容, 你可以用 \$分析-[句子] 命令查看其中的语素来优化";
+    if(v.length()>1||n.length()>1||w.length()>1||h.length()>1||t.length()>1){
+        str = "句子的元素过于复杂, 请酌情减少元素内容, 你可以用 \$分析-[句子] 命令查看其中的语素来优化你的句子来增加识别率.";
         return str;
     }
     file.create(v.get(0));
@@ -24,7 +25,9 @@ public fun learn(sentence: sentence, response: String): String {
     leveln.create(n.get(0));
     var levelw = jobj(leveln.g(n.get(0)));
     levelw.create(w.get(0));
-    var levelh = jobj(levelw.g(w.get(0)));
+    var levelt = jobj(levelw.g(w.get(0)));
+    levelt.create(t.get(0));
+    var levelh = jobj(levelt.g(t.get(0)));
 
     if(levelh.l(h.get(0))){
         str = "这个问题已经学会了, 上次教的回答是" + levelh.g(h.get(0));
@@ -33,7 +36,8 @@ public fun learn(sentence: sentence, response: String): String {
         str = "这个回答方式已经被记下了, 以后我就会这么回答这个问题";
     }
 
-    levelw.add(w.get(0), levelh.info());
+    levelt.add(t.get(0), levelh.info())
+    levelw.add(w.get(0), levelt.info());
     leveln.add(n.get(0), levelw.info());
     file.add(v.get(0),leveln.info());
 
@@ -50,6 +54,7 @@ public fun response(sentence: sentence): String {
     var v = sentence.v();
     var n = sentence.n();
     var w = sentence.w();
+    var t = sentence.t();
     var h = sentence.h();
 
     file.create(v.get(0));
@@ -57,7 +62,9 @@ public fun response(sentence: sentence): String {
     leveln.create(n.get(0));
     var levelw = jobj(leveln.g(n.get(0)));
     levelw.create(w.get(0));
-    var levelh = jobj(levelw.g(w.get(0)));
+    var levelt = jobj(levelw.g(w.get(0)));
+    levelt.create(t.get(0));
+    var levelh = jobj(levelt.g(t.get(0)));
     str = levelh.g(h.get(0));
 
     return str;

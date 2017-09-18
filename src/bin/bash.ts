@@ -18,7 +18,6 @@ function interval() {
     bash.getClip(function (out: string) {
         let a = out;
         if (a != clipboard) {
-            console.log(counter, clipboard, a)
             clipboard = a;
             if (counter != 0) {
                 parseSentence(clipboard);
@@ -46,7 +45,7 @@ function parseSentence(parsing: string) {
                 break;
             case "学习":
                 if (!Boolean(content)) {
-                    logger("学习的正确格式是$学习-[反应语素]>[回答方式]");
+                    logger("学习的正确格式是 $学习-[反应语素]>[回答方式]");
                 }
                 let sentence = content.split(">")[0];
                 let response = content.split(">")[1];
@@ -55,6 +54,8 @@ function parseSentence(parsing: string) {
             case "数据":
                 logger("数据功能还没有开发出来");
                 break;
+            case "关于":
+                logger("我是基于 BarkBot (Github.com/adogio/barkbot) 和 ItChat (https://github.com/littlecodersh/ItChat) 的微信机器人, 采用 CC-BA-SA 4.0 协议开源. 你可以用$反馈-[反馈的内容] 命令反馈你发现的 bug.")
             default:
                 logger("$" + mode + " 不是一个有效的命令");
         }
@@ -63,11 +64,11 @@ function parseSentence(parsing: string) {
     }
 }
 function hello() {
-    logger("我是基于ItChat和BkBot的微信机器人, 在线期间我会自动回复我能回答的问题. 你可以输入'$帮助'查看可以使用的命令. BkBot目前还在测试阶段, 链接稳定性较差, 你可以输入'$反馈-[反馈的内容]'来反馈bug.");
+    logger("我是基于ItChat和BkBot的微信机器人, 在线期间我会自动回复我能回答的问题.\n 你可以输入'$帮助'查看可以使用的命令.\n BkBot目前还在测试阶段, 链接稳定性较差, 你可以输入'$反馈-[反馈的内容]'来反馈bug.");
 }
 
 function help() {
-    logger("可用的命令: $学习-[问题]>[回答方式], $反馈-[反馈的内容], $帮助, $数据-[记录项目], $分析-[句子]");
+    logger("可用的命令:\n $学习-[问题]>[回答方式]\n $反馈-[反馈的内容]\n $帮助\n $数据-[记录项目]\n $分析-[句子]\n $关于");
 }
 
 function logger(str: string) {

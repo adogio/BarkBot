@@ -46,7 +46,6 @@ class bkbot(){
         for(i in content){
             re.push("< 词语: " + js("i.w") + " | 词性 : " + reverse(js("i.p")) + " >");
         }
-        console.log(re.list)
-        return "A"
+        return js("JSON.stringify(re.list)");
     }
 }

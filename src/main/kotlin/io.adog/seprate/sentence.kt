@@ -51,7 +51,7 @@ class sentence(sentence: String, segment: dynamic) {
     public fun w(): jarray {
         var re = jarray();
         for(i in parsed){
-            if(js("i.p") == "eng"||js("i.p") == "otr"||js("i.p") == "nul"||js("i.p") == "NAN"){
+            if(js("i.p") == "eng"||js("i.p") == "otr"||js("i.p") == "nul"||js("i.p") == "NAN"||js("i.p") == "omg"||js("i.p") == "prt"){
                 re.push(js("i.w"))
             }
         }
@@ -71,7 +71,7 @@ class sentence(sentence: String, segment: dynamic) {
     public fun h(): jarray {
         var re = jarray();
         for(i in parsed){
-            if(js("i.p") == "num"||js("i.p") == "nuw"||js("i.p") == "nun"||js("i.p") == "rep"){
+            if(js("i.p") == "num"||js("i.p") == "nuw"||js("i.p") == "nun"||js("i.p") == "rep"||js("i.p") == "buf"){
                 re.push(js("i.w"))
             }
         }
