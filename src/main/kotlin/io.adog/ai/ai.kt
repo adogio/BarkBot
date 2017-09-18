@@ -16,6 +16,7 @@ public fun learn(sentence: sentence, response: String): String {
 
     if(v.length()>1||n.length()>1||w.length()>1||h.length()>1){
         str = "句子的元素过于复杂, 请酌情减少元素内容";
+        return str;
     }
     file.create(v.get(0));
 
@@ -41,13 +42,22 @@ public fun learn(sentence: sentence, response: String): String {
 }
 
 public fun response(sentence: sentence): String {
-    var b = "{}"
-    var a = jobj(b);
-    var c = jobj(b);
-    c.add("zuoce", "dasd");
-    a.add("zuoce", c.info());
-    
-    var d = jobj(a.info());
-    console.log(d.g("zuoce"));
-    return "test";
+    var contentText = fs.readFileSync("./test/test.json");
+    var file = jobj(contentText);
+    var str = "";
+
+    var v = sentence.v();
+    var n = sentence.n();
+    var w = sentence.w();
+    var h = sentence.h();
+
+    file.create(v.get(0));
+    var leveln = jobj(file.g(v.get(0)));
+    leveln.create(n.get(0));
+    var levelw = jobj(leveln.g(n.get(0)));
+    levelw.create(w.get(0));
+    var levelh = jobj(levelw.g(w.get(0)));
+    str = levelh.g(h.get(0));
+
+    return str;
 }

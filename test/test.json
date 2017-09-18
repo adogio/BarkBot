@@ -21,6 +21,9 @@
             },
             "export": {
                 "default": "学习使我快乐"
+            },
+            "opt": {
+                "default": "是鸡"
             }
         }
     },
@@ -28,6 +31,13 @@
         "default": {
             "使": {
                 "default": "学习使我快乐"
+            }
+        }
+    },
+    "申请": {
+        "default": {
+            "opt": {
+                "default": "那太棒了"
             }
         }
     }

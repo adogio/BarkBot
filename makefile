@@ -34,7 +34,7 @@ clean :
 
 # ------------------------------------
 # run with gradle
-run :
+run : tsBuild
 	node ./src/bin/bash.js
 
 # run with kotlinc
@@ -47,7 +47,7 @@ r :
 	node ./src/bin/bash.js $(A)
 
 t :
-	node ./src/bin/bash.js $ 学习使我快乐 翁爷昨天在北京吃火锅
+	node ./src/bin/bash.js bk教学-opt是什么>是鸡
 
 opt :
 	echo $(A) | tee tmp.file.txt
