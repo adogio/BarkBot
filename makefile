@@ -47,8 +47,6 @@ r :
 
 # ------------------------------------
 # run with packaged glue file
-r :
-	node ./src/bin/bash.js $(A)
 
 opt :
 	echo $(A) | tee tmp.file.txt

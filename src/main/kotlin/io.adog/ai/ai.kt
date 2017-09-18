@@ -7,7 +7,7 @@ var fs = js("require(\"fs\")");
 public fun learn(sentence: sentence, response: String): String {
     var contentText = fs.readFileSync("./test/test.json");
     var file = jobj(contentText);
-    var str = "";
+    var str = "temp";
 
     var v = sentence.v();
     var n = sentence.n();
@@ -48,7 +48,7 @@ public fun learn(sentence: sentence, response: String): String {
 public fun response(sentence: sentence): String {
     var contentText = fs.readFileSync("./test/test.json");
     var file = jobj(contentText);
-    var str = "";
+    var str = "temp";
 
     var v = sentence.v();
     var n = sentence.n();
@@ -66,7 +66,7 @@ public fun response(sentence: sentence): String {
     var levelh = jobj(levelt.g(t.get(0)));
     str = levelh.g(h.get(0));
 
-    return str;
+    return js("JSON.parse(str)");
 }
 
 public fun bugR(content: String): String {

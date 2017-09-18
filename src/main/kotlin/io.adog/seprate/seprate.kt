@@ -26,7 +26,7 @@ class seprate(){
     public fun obj(): Any{
         //TODO
         var a: dynamic = this.sentenceList.get(0);
-        return js("a.p()");
+        return a.p();
     }
 
     public fun sen(): sentence{
