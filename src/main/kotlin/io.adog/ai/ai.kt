@@ -30,6 +30,7 @@ public fun learn(sentence: sentence, response: String): String {
         str = "这个问题已经学会了, 上次教的回答是" + levelh.g(h.get(0));
     }else{
         levelh.add(h.get(0), response);
+        str = "这个回答方式已经被记下了, 以后我就会这么回答这个问题";
     }
 
     levelw.add(w.get(0), levelh.info());

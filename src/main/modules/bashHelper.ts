@@ -34,8 +34,8 @@ class bashHelper {
         }
 
         fun(str, function (error, stdout, stderr) {
-            console.log('stdout: ' + stdout);
-            console.log('stderr: ' + stderr);
+            if (stdout) console.log('stdout: ' + stdout);
+            if (stderr) console.log('stderr: ' + stderr);
             if (error !== null) {
                 console.log('exec error: ' + error);
             }
@@ -51,6 +51,17 @@ class bashHelper {
         switch (this.os) {
             case "linux":
                 exec("xclip -selection clipboard -o",
+                    function (error, stdout, stderr) {
+                        fun(stdout);
+                        // console.log('stdout: ' + stdout);
+                        // console.log('stderr: ' + stderr);
+                        if (error !== null) {
+                            console.log('exec error: ' + error);
+                        }
+                    });
+                break;
+            case "darwin":
+                exec("pbpaste",
                     function (error, stdout, stderr) {
                         fun(stdout);
                         // console.log('stdout: ' + stdout);
