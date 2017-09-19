@@ -1,0 +1,27 @@
+{
+    "停车": {
+        "default": {
+            "permit": {
+                "default": {
+                    "default": "在armory"
+                }
+            }
+        }
+    },
+    "default": {
+        "天气": {
+            "default": {
+                "今天": {
+                    "default": "不怎么样"
+                }
+            }
+        },
+        "default": {
+            "armory": {
+                "default": {
+                    "哪里": "isu警察局旁边"
+                }
+            }
+        }
+    }
+}

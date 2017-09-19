@@ -22,8 +22,8 @@ class bashHelper {
             }
                 break;
             case 'linux': fun = (str, fn) => {
-                let cmd = 'make opt A="' + str + '"';
-                exec(cmd, fn || function () { });
+                // let cmd = 'make opt A="' + str + '"';
+                // exec(cmd, fn || function () { });
             }
                 break;
             case 'darwin': fun = (str, fn) => {
@@ -34,8 +34,8 @@ class bashHelper {
         }
 
         fun(str, function (error, stdout, stderr) {
-            console.log('stdout: ' + stdout);
-            console.log('stderr: ' + stderr);
+            if (stdout) console.log('stdout: ' + stdout);
+            if (stderr) console.log('stderr: ' + stderr);
             if (error !== null) {
                 console.log('exec error: ' + error);
             }
@@ -47,10 +47,25 @@ class bashHelper {
         }
     }
 
+    getOS() {
+        return this.os;
+    }
+
     getClip(fun: Function) {
         switch (this.os) {
             case "linux":
                 exec("xclip -selection clipboard -o",
+                    function (error, stdout, stderr) {
+                        fun(stdout);
+                        // console.log('stdout: ' + stdout);
+                        // console.log('stderr: ' + stderr);
+                        if (error !== null) {
+                            console.log('exec error: ' + error);
+                        }
+                    });
+                break;
+            case "darwin":
+                exec("pbpaste",
                     function (error, stdout, stderr) {
                         fun(stdout);
                         // console.log('stdout: ' + stdout);
