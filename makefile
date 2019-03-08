@@ -34,7 +34,7 @@ reset :
 
 
 tsBuild :
-	tsc
+	tsc --p typescript/tsconfig.build.json
 
 # ------------------------------------
 # run with gradle
