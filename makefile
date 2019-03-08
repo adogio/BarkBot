@@ -53,6 +53,13 @@ opt :
 	xclip -selection clipboard < tmp.file.txt
 	rm tmp.file.txt
 
-	
 gradleBuild :
 	gradle build
+
+install:
+	@echo "[INFO] Installing dev Dependencies"
+	@yarn install --production=false
+
+install-prod:
+	@echo "[INFO] Installing Dependencies"
+	@yarn install --production=true

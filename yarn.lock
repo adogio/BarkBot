@@ -2,18 +2,22 @@
 # yarn lockfile v1
 
 
-"@types/node@^8.0.28":
-  version "8.0.28"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.28.tgz#86206716f8d9251cf41692e384264cbd7058ad60"
+"@types/node@^11.11.0":
+  version "11.11.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.0.tgz#070e9ce7c90e727aca0e0c14e470f9a93ffe9390"
+  integrity sha512-D5Rt+HXgEywr3RQJcGlZUCTCx1qVbCZpVk3/tOOA6spLNZdGm8BU+zRgdRYDoF1pO3RuXLxADzMrF903JlQXqg==
 
-kotlin@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/kotlin/-/kotlin-1.1.4.tgz#bcb305efd540df67f7e274243eef35c26a8402f7"
+kotlin@^1.3.21:
+  version "1.3.21"
+  resolved "https://registry.yarnpkg.com/kotlin/-/kotlin-1.3.21.tgz#fbd71d31b4f2309b99a6616122cbef2706056b55"
+  integrity sha512-JqxY9quNzwWl8iYvNj/ycfNBEbSFDKvmeK2rDVU89q0/X8BRjVzibJ5RFOq/9efvvvi+VBnIRhL7GSOGzmP2nQ==
 
 segment@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/segment/-/segment-0.1.3.tgz#605f80fd6c7131c46e38103a17b1688f09efafa7"
+  integrity sha1-YF+A/WxxMcRuOBA6F7Fojwnvr6c=
 
 shell-escape@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/shell-escape/-/shell-escape-0.2.0.tgz#68fd025eb0490b4f567a027f0bf22480b5f84133"
+  integrity sha1-aP0CXrBJC09WegJ/C/IkgLX4QTM=

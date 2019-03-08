@@ -1,0 +1,10 @@
+--reporter spec
+--ui bdd
+
+--require test/tshook.js
+--require test/mock.ts
+
+--recursive
+
+test/**/*.test.ts
+test/**/*.test.tsx
