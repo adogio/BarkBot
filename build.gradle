@@ -27,5 +27,3 @@ compileKotlin2Js.kotlinOptions {
   moduleKind = "commonjs"
   outputFile = "main/lunch.js"
 }
-
-// compile fileTree(dir:'src/main/test', include: '*.kt')

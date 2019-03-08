@@ -1,7 +1,7 @@
 {
   "name": "bkbot",
   "version": "0.1.3",
-  "description": ":shell: wechat chat bot for nodeJS, built with kotlin",
+  "description": ":shell: A chat bot for nodeJS, built with Kotlin",
   "main": "src/bin/bkbot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,6 @@
     "bkbot": "src/bin/bash.js"
   },
   "keywords": [
-    "wechat",
     "bot",
     "kotlin"
   ],
