@@ -1,12 +1,5 @@
-# Makefile For BarkBot version 0.1.1
-
-# build with kotlinc
-# bkbot :
-# 	kotlinc-js -output build/lunch.js src/main.kt
-
 # build with gradle
-bkbot : gradleBuild tsBuild
-	echo done
+main : gradleBuild tsBuild
 
 o : tsBuild test
 
@@ -21,13 +14,6 @@ clean :
 # typeScripts
 	rm -rf src/bin/*.js src/main/modules/*.js
 
-# clean with kotlinc
-# clean :
-# 	rm -rf build/*.js
-# 	rm -rf build/lunch
-# typeScripts
-#	rm -rf src/bin/*.js src/main/module/*.js
-
 reset :
 	echo {} > ./test/test.json
 	echo [] > ./test/bug.json
@@ -36,17 +22,8 @@ reset :
 tsBuild :
 	tsc --p typescript/tsconfig.build.json
 
-# ------------------------------------
-# run with gradle
 r :
 	node ./src/bin/bash.js
-
-# run with kotlinc
-# run :
-# 	node ./build/lunch.js
-
-# ------------------------------------
-# run with packaged glue file
 
 opt :
 	echo $(A) | tee tmp.file.txt
